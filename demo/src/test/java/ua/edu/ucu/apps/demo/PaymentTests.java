@@ -1,4 +1,5 @@
 package ua.edu.ucu.apps.demo;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -8,13 +9,12 @@ import ua.edu.ucu.apps.demo.payment.PayPalPaymentStrategy;
 class PaymentTests {
     private PayPalPaymentStrategy payPalPayment;
     private CreditCardPaymentStrategy creditCardPayment;
-    private double price;
+    private final double price = 100;
 
     @BeforeEach
     public void init() {
         payPalPayment = new PayPalPaymentStrategy();
         creditCardPayment = new CreditCardPaymentStrategy();
-        price = 100.0;
     }
 
     @Test
