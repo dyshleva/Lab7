@@ -20,7 +20,8 @@ public class DeliverTets {
     public void init() {
         dhlDelivery = new DHLDeliveryStrategy();
         postDelivery = new PostDeliveryStrategy();
-        order = List.of(new Flower(price, 0.8, FlowerColor.RED), new Flower(price, 0.8, FlowerColor.RED));
+        order = List.of(new Flower(price, 0.8, FlowerColor.RED),
+                new Flower(price, 0.8, FlowerColor.RED));
     }
 
     @Test
