@@ -14,12 +14,13 @@ public class DeliverTets {
     private PostDeliveryStrategy postDelivery;
     private DHLDeliveryStrategy dhlDelivery;
     private List<Item> order;
+    private final double price = 100;
 
     @BeforeEach
     public void init() {
         dhlDelivery = new DHLDeliveryStrategy();
         postDelivery = new PostDeliveryStrategy();
-        order = List.of(new Flower(45, 0.8, FlowerColor.RED), new Flower(456, 0.8, FlowerColor.RED));
+        order = List.of(new Flower(price, 0.8, FlowerColor.RED), new Flower(price, 0.8, FlowerColor.RED));
     }
 
     @Test
